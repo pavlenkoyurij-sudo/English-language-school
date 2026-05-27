@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <hed>
@@ -8,7 +9,10 @@
     
     <title>Онлайн школа англійської мови</title>
 
-</hed>
+    <!--вілсилка до стилів-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
 
 
 
@@ -19,7 +23,6 @@
         <h2>English Language School🤓</h2>
         <nav>
                 <a href="#home">Головна</a>
-                <a href="#menu">Меню</a>
                 <a href="#contacts">Контакти</a>
                 <a href="mailto:yurij.webdev@gmail.com">
                     📧Зв'язатися
@@ -51,6 +54,40 @@
 
     </section>
 
+    <section class="advantages-section">
+
+        <h2 class="advantages-title">
+            Чому нас обирають😎
+        </h2>
+
+        <div class="advantages">
+            <div class="adv-card">
+                <h2>🎓</h2>
+
+                <p>
+                    Досвідчені викладачі
+                </p>
+            </div>   
+                
+            <div class="adv-card">
+                <h2>💻</h2>
+
+                <p>
+                    Онлайн навчання з будь якого місця
+                </p>
+            </div>
+
+            <div class="adv-card">
+                <h2>🌎</h2>
+
+                <p>
+                    Жива сучасна англійська
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
 
 
     <footer id="contacts"> 
@@ -71,137 +108,9 @@
 
     </footer>
 
+        <!--посилання до ява скрипта-->
+    <script src="script.js"></script> 
 </body>
-
-
-
-    <style>
-
-        *{box-sizing: border-box;
-            }
-
-        body {
-            background: #350f0f;
-            color: aqua;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            
-            margin: 0;
-        }   
-
-        header {
-            background: black;
-            font-size: 24px;
-            color: aqua;
-            padding: 20px;
-
-            position: sticky;
-
-            z-index: 500;
-        }
-
-        footer {
-            background: #350f0f;
-            padding: 40px;
-            font-size: 20px;
-            z-index: 600;
-        }
-
-
-        footer p, footer a {
-            color: aqua;
-            text-decoration: none;
-        }
-
-        .hero {
-            padding: 80px 20px;
-            background-image:
-            linear-gradient(rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-            ),
-            
-            url("https://images.pexels.com/photos/7750131/pexels-photo-7750131.jpeg");
-
-            background-size: cover;
-            background-position: center;
-
-            border-radius: 30px;
-
-            margin: 20px;
-
-            min-height: 500px;
-
-            display: flex;
-
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-        }
-
-        nav a {
-            color: rgb(37, 168, 168);
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: cyan;
-
-        }
-
-        .main-content {
-            font-size: 24px;
-            margin: 20px 0;
-        }
-
-            /*стилі КНОПКИ - СПРОБУВАТИ ЗАРАЗ*/
-        .hero button {
-            margin-top: 25px;
-
-            padding: 15px 25px;
-
-            border: none;
-
-            border-radius: 15px;
-
-            background: linear-gradient(
-                45deg,
-                cyan,
-                #00bfff
-            );
-
-            color: black;
-            font-size: 18px;
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-
-            box-shadow: 0 0 20px rgba(0,255,255,0.4);
-
-        }
-
-        .hero button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0,255,255,0.7);
-        }
-        
-        .hero h1 {
-            font-size: 52px;
-            max-width: 700px;
-        }
-
-
-    </style>
-
 
 
 </html>
