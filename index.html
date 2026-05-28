@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
-<hed>
+<head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -63,28 +63,60 @@
                 <img src="https://images.pexels.com/photos/7692514/pexels-photo-7692514.jpeg">
                 <h2>Для початківців</h2>
                 <p>Ви опануєте базові фрази для щоденного спілкування та зрозумієте логіку побудови речень. Ціна: 3000грн./місяць</p>
-                <button onclick="addToCart('Для початківців')">Дізнатися більше🔎</button>
+                <button onclick="openModal(
+                'Для початківців',
+                'Вивчення англійської з нуля — це як будівництво дому. Спочатку ми закладаємо міцний фундамент (базові слова та звуки), а вже потім зводимо стіни (граматику) та дах (вільне спілкування)',
+                3000,
+                'https://images.pexels.com/photos/7692514/pexels-photo-7692514.jpeg'
+                )">
+                    Дізнатися більше🔎
+                </button>
+
+
+
             </div> 
 
             <div class="course-card">
                 <img src="https://images.pexels.com/photos/7691671/pexels-photo-7691671.jpeg">
                 <h2>Intermediate</h2>
-                <p>По закінчені курсу ви вже зможете вільно вирішувати повсякденні та робочі завдання. Ціна: 3200грн./місяць</p>
-                <button onclick="openCourse('Imtermediate')">Дізнатися більше🔎</button>
+                <p>По закінчені курсу ви зможете вільно вирішувати повсякденні та робочі завдання. Ціна: 3200грн./місяць</p>
+                <button onclick="openModal(
+                'Intermediate',
+                'На цьому етапі студент перестає просто будувати зазубрені фрази й починає вільно висловлювати свої думки, обговорювати побутові та робочі теми, а також розуміти носіїв мови',
+                3200,
+                'https://images.pexels.com/photos/7691671/pexels-photo-7691671.jpeg'
+                )">
+                    Дізнатися більше🔎
+                </button>
+                
             </div> 
 
             <div class="course-card">
                 <img src="https://images.pexels.com/photos/36733363/pexels-photo-36733363.jpeg">
                 <h2>Speaking Club</h2>
              <p>Це тренінг вільного спілкування  у форматі - нове заняття - нова тема, навколо якої будується дискусія. Ціна: 3000грн./місяць</p>
-                <button onclick="openCourse('Spiaking Club')">Дізнатися більше🔎</button> 
+                <button onclick="openModal(
+                    'Speaking Club',
+                    'Це практичний курс або заняття, головна мета якого — збагатити словниковий запас та покращити навички вільного спілкування без нудного зубріння граматики. Це живе, інтерактивне обговорення, де фокус робиться виключно на розмовній практиці',
+                    3000,
+                    'https://images.pexels.com/photos/36733363/pexels-photo-36733363.jpeg'
+                    )">
+                        Дізнатися більше🔎
+                </button> 
             </div> 
 
             <div class="course-card">
                 <img src="https://images.pexels.com/photos/7693692/pexels-photo-7693692.jpeg">
                 <h2>Business English</h2>
              <p>Ви опануєте професійне спілкування, ділову переписку, презентації, обговорення контрактів та договорів. Ціна: 3800грн./місяць</p>
-                <button onclick="openCourse('Business English')">Дізнатися більше🔎</button> 
+                <button onclick="openModal(
+                    'Business English',
+                    'Це спеціалізована програма, розроблена для розвитку комунікативних навичок, необхідних для успішної кар\'єри, міжнародного нетворкінгу та ведення бізнесу. Курси ділової англійської допомагають подолати мовний бар\'єр під час перемовин, презентацій, листування та повсякденної роботи в компані',
+                    3800,
+                    'https://images.pexels.com/photos/7693692/pexels-photo-7693692.jpeg'
+                    )">
+                        Дізнатися більше🔎
+                </button> 
             </div>  
                       
     </div>
@@ -126,9 +158,32 @@
     </section>
 
 
+    <div id="course-modal"
+        class="modal"
+        onclick="closeModal(event)">
+            
+            <div class="modal-content">
+
+                <span class="close-modal"
+                onclick="document.getElementById('course-modal').style.display='none'">
+                </span>
+
+                <img id="modal-img" src="">
+
+                <h2 id="modal-title"></h2>
+
+                <p id="modal-description"></p>
+
+                <h3 id="modal-price"></h3>
+
+            </div>
+
+        </div>
+
+
 
     <footer id="contacts"> 
-        <h2>Школа англійької мови</h2>
+        <h2>Школа англійcької мови</h2>
 
         <p>📞Телефон: +38 (XXX) XXX XX XX</p>
             <p>
@@ -151,3 +206,4 @@
 
 
 </html>
+ 
