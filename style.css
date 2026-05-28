@@ -23,6 +23,48 @@
             z-index: 500;
         }
 
+        #course-modal {
+            display: none; /*спочатку прихована*/
+            position: fixed; /*фіксує поверх всього сайту*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);/*напівпрозорий фон*/
+            z-index: 9999;
+
+                    /*центрування віконця в середені флекс контейнера*/
+            justify-content: center;
+            align-items: center;
+        }
+                /*віконце з контентом*/
+        .modal-content {
+            background-color: #2c2c2e;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 550px;
+            width: 98%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+
+                /*дає можливість вписати весть текст + полоса прокрутки*/
+            max-height: 80vh;
+            overflow: auto;
+
+        }
+
+            /*ОБМЕЖУЄМО РОЗМІР КАРТИНКИ В МОДАЛЦІ*/
+        #modal-img {
+            width: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+
+
+
         footer {
             background: #350f0f;
             padding: 40px;
