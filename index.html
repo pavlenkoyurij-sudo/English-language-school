@@ -247,6 +247,58 @@
 
         <!--посилання до ява скрипта-->
     <script src="script.js"></script> 
+
+
+                <!--форма заявки-->
+        <div id="trial-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close-modal"
+                onclick="closeTrialModal()">
+                    ×
+            </span>
+
+            <h2>
+                Заявка на безкоштовне пробне заняття
+            </h2>
+            <p>
+                Наш менеджер зв'яжеться з вами для уточнення часу заняття😎
+            </p>
+
+            <input
+            type="text"
+            id="customer-name"
+            placeholder="Ваше ім'я">
+
+            <input
+            type="tel"
+            id="customer-phone"
+            placeholder="Телефон">
+
+            <input
+            type="text"
+            id="customer-age"
+            placeholder="Вік учня">
+
+            <textarea
+            id="customer-comment"
+            placeholder="Ваш коментар">
+            </textarea>
+
+            <button onclick="submitTrialForm()">
+                Підтвердити зaявку🔥
+            </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
 </body>
 
 
