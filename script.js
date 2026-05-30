@@ -1,4 +1,4 @@
- 
+
         function openModal(title, description, price, image) {
 
             document.getElementById("course-modal")
@@ -45,4 +45,44 @@
         const modal = document.getElementsById("course-modal");//змінна модал
 
 
+            //функції форми заявки - відкриття
+        function openTrialModal() {
 
+            document.getElementById("trial-modal")
+            .style.display = "flex";
+        }
+            
+            //функції форми заявки - закриття
+        function closeTrialModal() {
+
+            document.getElementById("trial-modal")
+            .style.display = "none";
+        }
+
+            //функції форми підтвердження заявки
+        function submitTrialForm() {
+            const name =
+            document.getElementById("customer-name").value;
+
+            const phone =
+            document.getElementById("customer-phone").value;
+
+            const age =
+            document.getElementById("customer-age").value;
+
+            if (!name || !phone || !age) {
+
+                alert("Заповніть необхідні поля😉");
+                return;
+            }
+
+            alert(
+                "Дякуємо за заявку, " + name + "😎\n\n" + 
+                "Очікуйте дзвінка нашого менеджера📞"
+            );
+
+            closeTrialModal();
+        }            
+     
+            
+            
