@@ -1,5 +1,6 @@
 
 
+
         *{box-sizing: border-box;
             }
 
@@ -465,3 +466,14 @@
             transform: scale(1.2);
         }
 
+
+        /*стилі блоку інформації про безкоштовне пробне заняття*/
+        .trial-info {
+            margin-top: 20px;
+
+            font-size: 28px;
+
+            line-height: 1.7;
+
+            color: #f5f5f5;            
+        }
