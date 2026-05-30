@@ -1,7 +1,4 @@
-
-
-
-        *{box-sizing: border-box;
+ *{box-sizing: border-box;
             }
 
         body {
@@ -271,12 +268,30 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            padding: 50px 20px;
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .course-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            
+            margin: 0 auto;
         }
         
         .course-card {
 
             width: 280px;
+            flex: 1 1 250px;
+            max-width: 250px;
             background: rgba(0,0,0,0.5);
             
             padding: 20px;
@@ -469,11 +484,54 @@
 
         /*стилі блоку інформації про безкоштовне пробне заняття*/
         .trial-info {
-            margin-top: 20px;
+            margin-top: 30px;/*відстань між кнопкою та текстом*/
 
             font-size: 28px;
 
             line-height: 1.7;
 
-            color: #f5f5f5;            
+            color: white;            
         }
+
+            /*стилі заголовка пробного уроку */
+        .trial-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: cyan;
+
+        }
+
+        .trial-info ul {
+
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .trial-info li {
+
+            font-size: 28px;
+            margin: 15px 0;
+
+        }
+
+        .trial-info li::before {
+
+            content: "✅ ";
+            margin-right: 10px;
+
+        }
+
+            /*тінь для шрифтів безкоштовного уроку*/
+        .trial-info,
+        .trial-title {
+
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+        }
+
+
+
+
+
