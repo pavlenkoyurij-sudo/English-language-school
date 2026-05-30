@@ -1,6 +1,5 @@
 
 
-
         *{box-sizing: border-box;
             }
 
@@ -337,4 +336,132 @@
             scroll-behavior: smooth;
         }
 
+        .modal {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0,0.7);
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 2000;
+        }
+
+
+        /*стилі вікна - безкоштовного заняття*/
+        .modal-content input,
+        .modal-content textarea {
+            width: 100%;
+
+            margin-top: 15px;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #333;
+
+            color: white;
+
+            font-size: 16px;
+
+            box-sizing: border-box;
+
+            outline: none;
+
+        }
+
+        .modal-content input::placeholder,
+        .modal-content textarea::placeholder {
+            color: #bbb;
+        }
+
+        .modal-content textarea {
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+            /*стилі КНОПКИ - форми безкоштовного заняття*/
+        .modal-content button {
+
+            margin-top: 20px;
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            background: cyan;
+
+            color: black;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+        .modal-content button:hover {
+
+            transform: scale(1.03);
+
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .modal-content {
+            
+            background: #222;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            width: 90%;
+
+            max-width: 500px;
+
+            max-height: 85vh;
+
+            overflow-y: auto;
+
+            text-align: center;
+
+            position: relative;
+
+        }
+
+        .close-modal {
+            position: absolute;
+
+            top: 15px;
+            right: 20px;
+
+            font-size: 32px;
+            cursor: pointer;
+            color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            color: cyan;
+            transform: scale(1.2);
+        }
 
