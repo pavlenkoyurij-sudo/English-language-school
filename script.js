@@ -82,7 +82,11 @@
             );
 
             closeTrialModal();
-        }            
+        }   
+        
+        
+        
      
+            
             
             
