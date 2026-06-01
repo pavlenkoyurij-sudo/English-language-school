@@ -1,4 +1,3 @@
-
         function openModal(title, description, price, image) {
 
             document.getElementById("course-modal")
@@ -82,11 +81,25 @@
             );
 
             closeTrialModal();
-        }   
+        }  
         
-        
-        
-     
+        function toggleFAQ(question) {
+
+            let answer = question.nextElementSibling;
+
+            //if(answer.style.display === "block") {answer.style.display = "none";} else {answer.style.display = "block";}
+            let isOpen = (answer.style.display === "block");//1 перевіряємо чи ця відповідь відкрита
+            //2-знаходимо всі відповіді на сторінці і ховаємо їх
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.style.display = "none";
+            });
+                //3-якщо клікнута відповідь була закритою - то вона відкривається
+            if (!isOpen) {
+                answer.style.display = "block";
+            }
+
             
-            
+        }
+        
+        
             
