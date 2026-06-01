@@ -557,7 +557,7 @@
             padding: 25px;
             border-radius: 20px;
             background: rgba(0,0,0,0.5);
-            background-filter: blur(10px);
+            backdrop-filter: blur(10px);
             box-shadow: 0 0 20px rgba(0,255,255,0.15);
             transition: 0.3s;
             position: relative;
@@ -588,20 +588,164 @@
             font-style: italic;/*тип тексту - курсив */
             color: white;
         }
-
+                /*(куточок повідомлення знизу зліва) after - створює елемент після вмісту; before - створює елемент після вмісту */
         .review-card::after {
             content: "";
             position: absolute;
 
-            bottom: -10px;
-            left: 30px;
+            bottom: -10px;/*квадрат виноситься трохи до низу*/
+            left: 30px;/*фіксує зліва*/
 
-            width: 20px;
+            width: 20px;/*створює кватрат*/
             height: 20px;
 
             background: rgba(0,0,0,0.5);
-            transform: rotate(45deg);
+            transform: rotate(45deg);/*повертає кватрат на 45 градусів*/
         }
+
+        .review-text {
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .process-layout {
+
+            display: flex;
+            justify-content: space-between;
+
+            align-items: center;
+            gap: 50px;
+
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-left {
+            flex: 1;
+        }
+
+        .process-step {
+            background: rgba(0,0,0,0.5);
+
+            padding: 20px;
+
+            border-radius: 20px;
+            
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,255,255,0.15);
+
+            text-align: center;
+        }
+            /*стрілка */
+        .arrow {
+
+            font-size: 40px;
+            text-align: center;
+            margin: 10px 0;
+            
+            color: cyan;
+        }
+            /*фото */
+        .process-right {
+            flex: 1;
+            text-align: center;
+        }
+
+        .process-right img {
+
+            max-width: 102%;
+            border-radius: 30px;
+
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+
+            /*стилі карток етапів навчання */
+        .step-number {
+
+            display: inline-flex;
+
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+
+            background: cyan;
+
+            color: black;
+
+            font-size: 30px;
+            font-weight: bold;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 15px;
+        }
+
+        .process-step:nth-child(1) {
+            border-left: 5px solid #00ffff;
+        }
+
+        .process-step:nth-child(3) {
+            border-left: 5px solid #00ff88;
+        }
+
+        .process-step:nth-child(5) {
+            border-left: 5px solid #ffcc00;
+        }
+
+        .process-step:nth-child(7) {
+            border-left: 5px solid #ff7b7b;
+        }
+
+        .process-step p {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .process-step span {
+
+            font-size: 40px;
+
+            display: block;
+
+            margin-bottom: 10px;
+        }
+
+        .arrow {
+
+            width: 20px;/*ширина стріли*/
+
+            height: 26px;/*висота ніжки стріли*/
+
+            background: white;/*колір стріли*/
+
+            margin: 25px auto;/*відстань від стрілки до нижньої картки */
+            
+            position: relative;
+
+        }
+
+        /*наконечник стріли*/
+        .arrow::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -18px;
+
+            left: -10px;
+
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid white;
+        }
+
+
+
+
+
 
 
 
