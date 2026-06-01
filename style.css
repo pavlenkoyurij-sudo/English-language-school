@@ -1,5 +1,5 @@
  
- 
+
 
         *{box-sizing: border-box;
             }
@@ -656,7 +656,7 @@
             max-width: 102%;
             border-radius: 30px;
 
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            box-shadow: 0 0 40px rgba(0,255,255,0.2);/*border: 2px solid rgba(0,255,255,0.2); - варіанти рамки карьтнки - дівчини в шапці*/
         }
 
             /*стилі карток етапів навчання */
@@ -705,7 +705,8 @@
 
         .process-step span {
 
-            font-size: 40px;
+            font-size: 45px;
+            font-weight: bold;
 
             display: block;
 
@@ -742,6 +743,54 @@
             border-top: 20px solid white;
         }
 
+        .faq-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        /*розділ "часті запатання*/
+        .faq-section h2 {
+            color: cyan;
+            margin-bottom: 50px;
+        }
+
+
+        .faq-item {
+
+            max-width: 900px;
+
+            margin: 20px auto;
+
+            padding: 25px;
+
+            background: rgba(0,0,0,0.5);
+
+            box-shadow: 0 0 40px rgba(0,255,255,0.2);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(10px);
+
+            text-align: left;
+
+            margin-bottom: 20px;
+
+        }
+
+        .faq-item h3 {
+            color: cyan;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            color: white;
+            line-height: 1.6;
+            display: none;
+            margin-top: 15px;
+        }
+
+        
 
 
 
