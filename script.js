@@ -1,3 +1,4 @@
+    
         function openModal(title, description, price, image) {
 
             document.getElementById("course-modal")
@@ -19,14 +20,8 @@
             document.getElementById("modal-img")
             .src = image;
         }
+          
 
-        function closeModal(event) {
-            if (event.target.id === "course-modal") {
-
-                document.getElementById("course-modal")
-                .style.display = "none";
-            }   
-        }
                 // функція закриття модального вікна
         function closeModal(event) {
             if (event.target.id === "course-modal") {
@@ -41,7 +36,7 @@
             }   
         }
 
-        const modal = document.getElementsById("course-modal");//змінна модал
+        const modal = document.getElementById("course-modal");//змінна модал, також прибрано s:getElementByIds
 
 
             //функції форми заявки - відкриття
@@ -105,6 +100,26 @@
 
             openTrialModal();
         }
+
+
+        const btn = document.getElementById("scrollToTopBtn");
+
+                //показуєт кнопку, коли юзер прокручує сторінку до низу
+        window.addEventListener("scroll", function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        
+                //прокручує сторінку плавно до самого верху при наимсканні
+        btn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"//забезпечує плавний скролінг
+            });
+        });
         
         
-            
