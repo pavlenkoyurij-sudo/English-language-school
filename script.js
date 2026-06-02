@@ -97,8 +97,13 @@
             if (!isOpen) {
                 answer.style.display = "block";
             }
+           
+        }
 
-            
+        function signupCourse() {
+            document.getElementById('course-modal').style.display = 'none';
+
+            openTrialModal();
         }
         
         
