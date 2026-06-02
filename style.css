@@ -790,7 +790,129 @@
             margin-top: 15px;
         }
 
+        /*ховає фото дфвчини в конфедератці на телефоні */
+        @media (max-width: 768px) {
+            
+            .process-right {
+                 display: none;
+            }
+                /*адаптація під телефон*/
+            .process-layout {
+                flex-direction: column;
+            }
+        }
+
+        .teachers-container {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+
+
+                /*картка вчителя */
+        .teacher-card {
+
+            background: rgba(0,0,0,0.5);
+
+            padding: 25px;
+
+            width: 300px;
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 0 40px rgba(0,255,255,0.2);/*світіння навколо об'єкта*/
+
+            text-align: center;
+
+            transition: 0.3s;/*картка вчителя оживала */
+        }
+
+        .teacher-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 0 50px rgba(0,255,255,0.3);/*світіння навколо об'єкта*/
+        }
+
+
+        .teacher-card img {
+
+            width: 160px;
+
+            height: 160px;
+
+            border-radius: 50%;/*робить фото круглим */
+
+            object-fit: cover;/*не дозволяє фото розтягуватися*/
+
+            margin-top: 15px;
+        }
+            /*секція кнопки-вивчити англійську*/
+        .cta-section {
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            color: cyan;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 22px;
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .cta-btn {
+
+            background: linear-gradient(
+                45deg,
+                cyan,
+                #00aaff
+            );
+
+            color: black;
+
+            border: none;
+
+            padding: 20px 50px;
+
+            font-size: 26px;
+            font-weight: bold;
+
+            border-radius: 60px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow: 0 0 40px rgba(0,0,0,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(0,255,255,0.6);    
+
+        }
+
+
+            
+
+
+
         
+
+
+
 
 
 
