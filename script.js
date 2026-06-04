@@ -1,5 +1,5 @@
-    
-        function openModal(title, description, price, image) {
+
+        function openModal(title, description, priceText, image) {
 
             document.getElementById("course-modal")
             .style.display = "flex";
@@ -15,7 +15,7 @@
             .innerHTML = description;
 
             document.getElementById("modal-price")
-            .innerHTML = price + " грн/місяць";
+            .innerHTML = priceText;
 
             document.getElementById("modal-img")
             .src = image;
@@ -77,23 +77,29 @@
 
             closeTrialModal();
         }  
+
         
+            //робота блоку ФАК
         function toggleFAQ(question) {
 
             let answer = question.nextElementSibling;
 
-            //if(answer.style.display === "block") {answer.style.display = "none";} else {answer.style.display = "block";}
-            let isOpen = (answer.style.display === "block");//1 перевіряємо чи ця відповідь відкрита
-            //2-знаходимо всі відповіді на сторінці і ховаємо їх
+            //перевіряємо чи саме ця відповідь відкрита
+            let isOpen = answer.classList.contains('open');
+
+            //закриваємо всі інші відповіді
             document.querySelectorAll('.faq-answer').forEach(ans => {
-                ans.style.display = "none";
+                if (ans !== answer) {         
+                    ans.classList.remove('open');
+                }
             });
-                //3-якщо клікнута відповідь була закритою - то вона відкривається
-            if (!isOpen) {
-                answer.style.display = "block";
-            }
-           
+
+            //якщо поточна була відкрита - закриваємо її, якщо закрита - відкриваємо
+            answer.classList.toggle('open');
         }
+
+
+
 
         function signupCourse() {
             document.getElementById('course-modal').style.display = 'none';
@@ -123,3 +129,5 @@
         });
         
         
+        
+     
