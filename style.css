@@ -1,5 +1,6 @@
 
 
+
         *{box-sizing: border-box;
             }
 
@@ -141,6 +142,12 @@
             justify-content: center;
             align-items: center;
         }
+            /*уроки онлайн для дітей та дорослих*/
+        .hero p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.3rem;
+        }
+
 
         nav {
                 display: flex;
@@ -378,6 +385,22 @@
             flex: 1 1 600px;
             max-width: 600px;
         }
+
+            /*стилі фото картки індивідуального занняття*/
+        .featured-course img {
+            height: 260px;
+        }
+
+        .featured-course p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-course h3 {
+
+            margin-top: 25px;
+        }
+
 
 
 
@@ -749,6 +772,11 @@
             border-top: 20px solid white;
         }
 
+        /*відступ над навчальними етапами*/
+        .learning-process {
+            margin-top: 80px;
+        }
+
         .faq-section {
             padding: 80px 20px;
             text-align: center;
@@ -815,7 +843,7 @@
 
         
 
-        /*ховає фото дфвчини в конфедератці на телефоні */
+        /*ховає фото дiвчини в конфедератці на телефоні */
         @media (max-width: 768px) {
             
             .process-right {
@@ -984,6 +1012,9 @@
             opacity: 1;
             pointer-events: auto;
         }
+
+
+            
 
 
             
