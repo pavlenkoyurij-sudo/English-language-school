@@ -1,4 +1,5 @@
 
+     
         function openModal(title, description, priceText, image) {
 
             document.getElementById("course-modal")
@@ -130,4 +131,3 @@
         
         
         
-     
